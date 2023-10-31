@@ -9,15 +9,15 @@ pipeline {
             steps {
                 git branch: 'main', url: 'https://github.com/aaikenwood/lbg-hello-world-maven.git'
             }
-            stage('Compile') {
-                steps {
-                    sh "mvn clean compile"
-                }
+        }
+        stage('Compile') {
+            steps {
+                sh "mvn clean compile"
             }
-            stage('Test') {
-                steps {
-                    sh "mvn test"
-                }
+        }
+        stage('Test') {
+            steps {
+                sh "mvn test"
             }
         }
         stage('Package') {
